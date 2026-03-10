@@ -6,11 +6,13 @@ import devToolsJsone from "vite-plugin-devtools-json";
 import Inspect from "vite-plugin-inspect";
 
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   assetsInclude: ["**/*.md"],
-  plugins: [devToolsJsone(), tailwindcss(), reactRouter(), tsconfigPaths(), devToolsJsone(), Inspect({
-    build: true,
-    outputDir: "inspect",
-  }
-  )],
-});
+  plugins: [
+    tailwindcss(),
+    reactRouter(),
+    tsconfigPaths(),
+    command !== 'build' && devToolsJsone(),
+    command !== 'build' && Inspect(), 
+  ],
+}));
