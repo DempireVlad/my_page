@@ -1,0 +1,38 @@
+[
+    {
+      "id": "1",
+      "slug": "react-hooks-overview",
+      "title": "Практичний посібник з React Hooks - 00",
+      "excerpt": "Зрозумійте useState, useEffect та кастомні хуки на реальних прикладах.",
+      "date": "2025-03-01T09:00:00Z"
+    },
+    {
+    "id": "2",
+    "slug": "css-utility-vs-component",
+    "title": " Порівняння CSS Utility-First та Component-Based Підходів",
+    "excerpt": "Огляд переваг та недоліків підходів Tailwind CSS та Styled Components.",
+    "date": "2025-03-01T14:15:00Z"
+    },
+  {
+    "id": "3",
+    "slug": "api-authentication-strategies",
+    "title": "Пояснення стратегій автентифікації API",
+    "excerpt": "Розбір методів автентифікації API, таких як JWT, OAuth2, ключі API та інші.",
+    "date": "2025-02-18T10:30:00Z"
+  },
+
+  {
+    "id": "4",
+    "slug": "writing-clean-code",
+    "title": "Написання чистого та підтримуваного коду 00",
+    "excerpt": "Найкращі практики для покращення читабельності, структури та повторного використання коду.",
+    "date": "2025-02-10T08:00:00Z"
+  },
+  {
+    "id": "5",
+    "slug": "deploying-fullstack-apps",
+    "title": "Розгортання Full-Stack додатків: простий посібник",
+    "excerpt": "Все, що вам потрібно знати для спільного розгортання вашого фронтенду та бекенду.",
+    "date": "2025-01-28T07:00:00Z"
+  }
+]
