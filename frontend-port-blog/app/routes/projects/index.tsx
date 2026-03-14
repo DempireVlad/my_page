@@ -64,7 +64,7 @@ const ProjectPage = ({ loaderData }: Route.ComponentProps) => {
 
   return (
     <>
-      <h2 className="text-3xl font-bold mb-8 text-center">Проджекти</h2>
+      <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
       <div className="mb-6 flex justify-center space-x-6">
         {categories.map((category) => (
           <button
