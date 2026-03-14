@@ -9,7 +9,6 @@ import { AnimatePresence, motion } from "framer-motion";
 export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ projects: Project[] }> {
-  // const res = await fetch("http://localhost:8000/projects");
   const res = await fetch(`${import.meta.env.VITE_API_URL}/projects?populate=*`);
   const jsone: StrapiResponse<StrapiProject> = await res.json();
   const projects = jsone.data.map((item: any) => ({
@@ -35,7 +34,7 @@ export async function loader({
 const ProjectPage = ({ loaderData }: Route.ComponentProps) => {
   const { projects } = loaderData as { projects: Project[] };
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 2;
+  const projectsPerPage = 4;
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const categories = [
     "All",

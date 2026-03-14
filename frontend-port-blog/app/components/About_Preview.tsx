@@ -18,7 +18,7 @@ const AboutPreview = () => {
         </p>
       </div>
       <ul className="flex flex-wrap pb-4 justify-center gap-2 ">
-  {["HTML","CSS","JavaScript","React","TypeScript","Node.js"].map((tech) => (
+  {["HTML","CSS","JavaScript","React","TypeScript","Next.js"].map((tech) => (
     <li
       key={tech}
       className="px-3 py-1 text-sm bg-gray-700 text-gray-200 rounded-full"

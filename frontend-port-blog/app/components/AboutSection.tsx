@@ -37,7 +37,7 @@ const AboutSection = () => {
         <h2 className="text-2xl font-semibold mb-4">Skills</h2>
 
         <ul className="flex flex-wrap pb-4  gap-2 ">
-          {["HTML", "CSS", "JavaScript", "React", "TypeScript", "Node.js"].map(
+          {["HTML", "CSS", "JavaScript", "React", "TypeScript", "Next.js"].map(
             (tech) => (
               <li
                 key={tech}

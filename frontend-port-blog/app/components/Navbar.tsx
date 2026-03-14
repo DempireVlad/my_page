@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router";
 import { FaLaptopCode, FaTimes, FaBars } from "react-icons/fa";
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const base = "transition hover:text-blue-400";
@@ -24,30 +25,35 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? active : base)}
+              
             >
               Main
             </NavLink>
             <NavLink
               to="/projects"
               className={({ isActive }) => (isActive ? active : base)}
+        
             >
               Projects
             </NavLink>
             <NavLink
               to="/blog"
               className={({ isActive }) => (isActive ? active : base)}
+           
             >
               Blog
             </NavLink>
             <NavLink
               to="/about"
               className={({ isActive }) => (isActive ? active : base)}
+            
             >
               About
             </NavLink>
             <NavLink
               to="/contact"
               className={({ isActive }) => (isActive ? active : base)}
+            
             >
               Contact
             </NavLink>
@@ -66,30 +72,35 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? active : base)}
+              onClick={() => setIsOpen(false)}
             >
               Main
             </NavLink>
             <NavLink
               to="/projects"
               className={({ isActive }) => (isActive ? active : base)}
+              onClick={() => setIsOpen(false)}
             >
               Projects
             </NavLink>
             <NavLink
               to="/blog"
               className={({ isActive }) => (isActive ? active : base)}
+              onClick={() => setIsOpen(false)}
             >
               Blog
             </NavLink>
             <NavLink
               to="/about"
               className={({ isActive }) => (isActive ? active : base)}
+              onClick={() => setIsOpen(false)}
             >
               About
             </NavLink>
             <NavLink
               to="/contact"
               className={({ isActive }) => (isActive ? active : base)}
+              onClick={() => setIsOpen(false)}
             >
               Contact
             </NavLink>
