@@ -28,13 +28,14 @@ export async function loader({ params }: Route.LoaderArgs) {
     date: item.date,
     category: item.category,
     featured: true,
+    git: item.git,
   };
 
   return project;
 }
 
 export function HydrateFallback() {
-  return <div>Завантаження...</div>;
+  return <div>Loading...</div>;
 }
 
 const ProjectDetailsPage = ({ loaderData }: Route.ComponentProps) => {
@@ -43,13 +44,12 @@ const ProjectDetailsPage = ({ loaderData }: Route.ComponentProps) => {
 
   return (
     <>
-    
       <Link
         to="/projects"
         className="group inline-flex items-center gap-2 text-blue-500 font-medium mb-4 relative"
       >
         <FaArrowLeft className="transition-transform duration-300 group-hover:-translate-x-2" />
-        До проджектів
+        Back to projects
         <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
       </Link>
       <div>
@@ -60,15 +60,22 @@ const ProjectDetailsPage = ({ loaderData }: Route.ComponentProps) => {
             {new Date(project.date).toLocaleDateString()}
           </p>
           <p className="py-2">{project.description}</p>
+
           <a
             href={project.url}
-            className="group inline-flex items-center gap-2 mb-4 text-blue-500 relative"
+            className="group inline-flex items-center mb-2.5 gap-1 px-3 py-1 rounded-md border border-blue-500 text-blue-500 transition-colors duration-300 hover:bg-blue-500 hover:text-white"
           >
-            Переглянути сайт
-            <FaArrowRight className="transition-transform group-hover:translate-x-1" />
-            <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            View site
+            <FaArrowRight className="transition-transform duration-200 group-hover:translate-x-1" />
           </a>
         </div>
+       {project.git && <a
+          href={project.git}
+          className="group cursor-pointer inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-lg bg-linear-to-r from-blue-500 to-indigo-500 text-white shadow-md hover:shadow-blue-500/40 transition-all duration-300"
+        >
+          View on GitHub
+          <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+        </a>}
       </div>
     </>
   );

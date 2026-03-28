@@ -8,6 +8,7 @@ export type Project = {
   date: string;
   category: string;
   featured: boolean;
+  git: string;
 };
 
 export type PostMeta = {
@@ -35,6 +36,7 @@ export type StrapiProject = {
   date: string;
   category: string;
   featured: boolean;
+  git: string;
 };
 
 export type StrapiPost = {
