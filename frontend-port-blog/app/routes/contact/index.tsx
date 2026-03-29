@@ -52,9 +52,7 @@ const errors = actionData?.errors || {};
 
 
             <form className='space-y-6' action="https://formspree.io/f/mojkvoqk" method="post">
-            {/* <Form className='space-y-6' method="post"> */}
-
-                {/* Повне ім'я */}
+          
                 <div>
                     <label
                         htmlFor='name'
@@ -71,7 +69,7 @@ const errors = actionData?.errors || {};
                     {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                 </div>
 
-                {/* Електронна пошта */}
+                
                 <div>
                     <label
                         htmlFor='email'
@@ -88,7 +86,7 @@ const errors = actionData?.errors || {};
                     {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                 </div>
 
-                {/* Тема */}
+               
                 <div>
                     <label
                         htmlFor='subject'
@@ -105,7 +103,7 @@ const errors = actionData?.errors || {};
                     {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
                 </div>
 
-                {/* Повідомлення */}
+              
                 <div>
                     <label
                         htmlFor='message'
@@ -122,7 +120,7 @@ const errors = actionData?.errors || {};
                     {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                 </div>
 
-                {/* Кнопка відправки */}
+               
                 <button
                     type='submit'
                     className='w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition'
@@ -130,7 +128,6 @@ const errors = actionData?.errors || {};
                     Send Message
                 </button>
 
-            {/* </Form> */}
             </form>
         </section>
     );

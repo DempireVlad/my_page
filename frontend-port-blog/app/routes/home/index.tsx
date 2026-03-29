@@ -1,7 +1,7 @@
 import FeaturedProjects from "~/components/Featuered_Projects";
 import type { Route } from "./+types/index";
 import type { Project, StrapiProject, StrapiResponse, StrapiPost } from "~/type";
-// import AboutPreview from "~/components/About_Preview";
+
 import type { PostMeta  } from "~/type";
 import LatestPosts  from "~/components/LatestPosts";
 

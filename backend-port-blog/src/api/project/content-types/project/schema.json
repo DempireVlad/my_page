@@ -53,6 +53,9 @@
       "type": "boolean",
       "required": true,
       "default": false
+    },
+    "git": {
+      "type": "string"
     }
   }
 }
