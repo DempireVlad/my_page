@@ -28,6 +28,8 @@ const LatestPosts = ({ posts, limit = 2 }: LatestPostsProps) => {
     )
     }
 
+    
+
 
 
 export default LatestPosts;

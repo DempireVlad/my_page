@@ -5,20 +5,19 @@ import { useState } from "react";
 import Pagination from "~/components/Pagination";
 import { AnimatePresence, motion } from "framer-motion";
 
-
 export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ projects: Project[] }> {
-  const res = await fetch(`${import.meta.env.VITE_API_URL}/projects?populate=*`);
+  const res = await fetch(
+    `${import.meta.env.VITE_API_URL}/projects?populate=*&sort[0]=date:desc`,
+  );
   const jsone: StrapiResponse<StrapiProject> = await res.json();
   const projects = jsone.data.map((item: any) => ({
     id: item.id,
     documentId: item.documentId,
     title: item.title,
     description: item.description,
-    image: item.image?.url
-      ? `${item.image.url}`
-      : "/images/no-image.jpg",
+    image: item.image?.url ? `${item.image.url}` : "/images/no-image.jpg",
     url: item.url,
     date: item.date,
     category: item.category,
@@ -28,13 +27,10 @@ export async function loader({
   return { projects };
 }
 
-
-
-
 const ProjectPage = ({ loaderData }: Route.ComponentProps) => {
   const { projects } = loaderData as { projects: Project[] };
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 4;
+  const projectsPerPage = 6;
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const categories = [
     "All",
