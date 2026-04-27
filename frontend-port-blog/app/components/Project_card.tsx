@@ -11,17 +11,18 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <img
           src={project.image}
           alt={project.title}
-          className="h-50 w-full object-cover"
+          className="h-52 w-full object-cover"
         />
         <div className="p-5">
           <h3 className="text-xl font-bold mb-2 text-blue-500">
             {project.title}
           </h3>
-          <p className="mb-4 text-gray-300 text-sm line-clamp-3">{project.description}</p>
+          <p className="mb-4 text-gray-300 text-sm line-clamp-3">
+            {project.description}
+          </p>
           <div className="flex justify-between items-end text-sm text-gray-400">
             <span>{project.category}</span>
             <span>{new Date(project.date).toLocaleDateString()}</span>
-            
           </div>
         </div>
       </div>
